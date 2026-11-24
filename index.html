@@ -687,7 +687,9 @@ html, body { background: #121325 !important; margin: 0 !important; padding: 0 !i
 </section>
 <style>
 .pv .plano .rec-set { position:absolute; top:-12px; left:24px; font:800 11px var(--t); letter-spacing:.1em; text-transform:uppercase; background:#3a3570; color:#fff; padding:5px 10px; border-radius:99px; }
-@media (max-width: 760px) { .pv .planos .plano { order:0 !important; } }
+.pv .planos { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.pv .planos .conv { display:none; }
+@media (max-width: 760px) { .pv .planos { grid-template-columns:1fr; } .pv .planos .plano { order:0 !important; } }
 </style>
 <!-- ============ 7. ROI + CUSTO DE FICAR COMO ESTA ============ -->
 <section class="sec dg-secao dg-fundo-luz sim" id="roi">
@@ -789,54 +791,64 @@ html, body { background: #121325 !important; margin: 0 !important; padding: 0 !i
       <li>Não desça preço: o desconto é dezembro grátis. Se o volume crescer, a troca para um plano maior pode ser feita durante o contrato.</li>
       <li>165 cotações com 3 fornecedores pedem cerca de 495 negociações por mês. A Black Friday cobre perto da metade: comece pelas obras com mais correria e cresça o plano quando o processo estiver rodando.</li>
       <li>Passe rápido pelos dois cards de setembro e pare no da Black Friday: é a menor entrada, pensada para o momento que o André descreveu.</li>
-      <li>"Qual destas conversa com o plano de vocês para os próximos 12 meses?" Clique na escolhida: a conta do retorno, logo acima, passa a usar esse plano (pela mensalidade cheia, sem contar dezembro grátis).</li>
+      <li>"Qual destas conversa com o plano de vocês para os próximos 12 meses?" Clique num card de setembro ou no bloco da Black Friday: a conta do retorno, logo acima, passa a usar esse plano (pela mensalidade cheia, sem contar dezembro grátis).</li>
       <li>Se o preço pesar, lembre que dezembro já sai sem mensalidade. Não dê desconto na mensalidade de R$ 3.200; se precisar ceder, ceda na implantação e sempre em troca de algo (Termo até 27/11).</li></ul></div>
     <p class="ponte rv">Com pessoas, você gastaria <b data-o="a_pessoasCusto">R$ 5 mil/mês</b>. E com a dgenny:</p>
     <div class="num"><b>6</b> Investimento</div>
     <div class="planos">
-      <div class="plano sel rv" data-plano="1" tabindex="0" role="button" style="order:3"><span class="rec">Black Friday</span>
-        <h3>Começar pelo essencial</h3><p class="para">Uma assistente e 3.000 negociações no ano (250 por mês), com dezembro sem mensalidade.</p>
-        <div class="asst"><i style="background:none;color:var(--txt);width:auto;font:700 12px var(--t);font-style:normal">1 assistente · número incluso</i></div>
-        <div class="conv">250 negociações/mês<small>3.000 no ano, saldo livre · 1 assistente</small></div>
-        <div class="preco"><b>R$ 3.200</b> <span>/mês</span><br><span>dezembro sem mensalidade · 11 mensalidades pagas no contrato</span></div>
-      </div>
       <div class="plano rv" data-plano="2" tabindex="0" role="button" style="order:1"><span class="rec-set">Proposta de 22/09</span>
-        <h3>2 assistentes</h3><p class="para">Duas assistentes e 12.000 negociações no ano (1.000 por mês), como apresentado em 22/09.</p>
+        <h3>2 assistentes</h3><p class="para">Duas assistentes, como apresentado ao Charles em 22/09.</p>
         <div class="asst"><i style="background:none;color:var(--txt);width:auto;font:700 12px var(--t);font-style:normal">2 assistentes · números inclusos</i></div>
         <div class="conv">1.000 negociações/mês<small>12.000 no ano, saldo livre · 2 assistentes</small></div>
         <div class="preco"><b>R$ 4.000</b> <span>/mês</span><br><span>implantação R$ 4.800 · 2 assistentes inclusas</span></div>
       </div>
       <div class="plano rv" data-plano="3" tabindex="0" role="button" style="order:2"><span class="rec-set">Proposta de 22/09</span>
-        <h3>4 assistentes, uma por comprador</h3><p class="para">Quatro assistentes e 24.000 negociações no ano (2.000 por mês), uma por comprador, como apresentado em 22/09.</p>
+        <h3>4 assistentes, uma por comprador</h3><p class="para">Quatro assistentes, uma por comprador, como apresentado ao Charles em 22/09.</p>
         <div class="asst"><i style="background:none;color:var(--txt);width:auto;font:700 12px var(--t);font-style:normal">4 assistentes · números inclusos</i></div>
         <div class="conv">2.000 negociações/mês<small>24.000 no ano, saldo livre · 4 assistentes</small></div>
         <div class="preco"><b>R$ 6.000</b> <span>/mês</span><br><span>implantação R$ 9.600 · 4 assistentes inclusas</span></div>
       </div>
     </div>
-    <div class="card paral semsurpresa rv"><span class="dg-icone"><svg aria-hidden="true" width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,1.5A10.5,10.5,0,1,0,22.5,12,10.51211,10.51211,0,0,0,12,1.5Zm0,1a9.45065,9.45065,0,0,1,6.344,2.449L15.51691,7.77606a5.48445,5.48445,0,0,0-7.03382,0L5.656,4.949A9.45065,9.45065,0,0,1,12,2.5ZM16.5,12A4.5,4.5,0,1,1,12,7.5,4.50491,4.50491,0,0,1,16.5,12Zm-14,0A9.45065,9.45065,0,0,1,4.949,5.656L7.77606,8.48309a5.48445,5.48445,0,0,0,0,7.03382L4.949,18.344A9.45065,9.45065,0,0,1,2.5,12ZM12,21.5a9.45065,9.45065,0,0,1-6.344-2.449l2.82708-2.82709a5.48445,5.48445,0,0,0,7.03382,0L18.344,19.051A9.45065,9.45065,0,0,1,12,21.5Zm7.051-3.156-2.82709-2.82708a5.48445,5.48445,0,0,0,0-7.03382L19.051,5.656a9.44145,9.44145,0,0,1,0,12.688Z"/></svg></span><div><h3 style="font-size:17px;margin-bottom:4px">Como ler as opções</h3><p style="color:var(--txt);margin:0">À esquerda, as duas opções que o Charles levou à diretoria em setembro. À direita, a condição de Black Friday: uma entrada menor, para a Conterplan organizar o Compras com a assistente já trabalhando. Em todas:</p>
-      <ul><li><b>Número separado:</b> o fornecedor sabe quando fala com a assistente e quando fala com o comprador, e a cotação não se mistura com o resto do dia.</li>
-      <li><b>Saldo da empresa:</b> qualquer assistente consome do mesmo pacote, e o saldo pode ser usado conforme a demanda de cada mês.</li></ul></div></div>
-    <p class="nota">Valores do contrato anual. O saldo de negociações é do contrato inteiro e pode ser usado conforme a demanda de cada mês. Novas assistentes podem entrar a qualquer momento, até o limite do plano. Sem custo escondido: as mensagens da Meta são por conta da dgenny, e a integração com o Sienge não tem custo adicional da dgenny.</p>
-    <div class="card oferta bf rv" style="margin-top:22px;padding:30px;border:2px solid var(--rosa);background:linear-gradient(135deg, rgba(255,190,245,.16), rgba(102,96,180,.28))">
-      <span class="dg-etiqueta">Black Friday · Termo de Adesão assinado até 27/11/2026</span>
-      <h3 style="font-size:24px;margin:12px 0 6px">Uma assistente por <span class="dg-destaque">R$ 3.200</span>, com dezembro sem mensalidade</h3>
-      <p style="color:var(--txt);margin:0">Uma assistente e 250 negociações por mês, integrada ao Sienge, com o mesmo produto apresentado em setembro. O contrato é de 12 meses e começa em dezembro, que sai sem mensalidade: a Conterplan paga 11 mensalidades. O mês de dezembro serve para organizar o processo de compras com a assistente já cotando.</p>
+    <div class="plano sel bf rv" id="bf" data-plano="1" tabindex="0" role="button"><span class="rec">Condição Black Friday</span>
+      <span class="dg-etiqueta">Termo de Adesão assinado até 27/11/2026</span>
+      <div class="bf-topo">
+        <div>
+          <h3>Comece pelo essencial, <span class="dg-destaque">com dezembro sem mensalidade</span></h3>
+          <p>Uma assistente integrada ao Sienge, com o mesmo produto apresentado em setembro, e 250 negociações por mês (3.000 no ano, saldo livre). O contrato é de 12 meses e começa em dezembro, que sai sem mensalidade. Dezembro serve para organizar o processo de compras com a assistente já cotando.</p>
+        </div>
+        <div class="bf-preco"><small>mensalidade</small><b>R$ 3.200</b><span>/mês</span><small>1 assistente · 250 negociações/mês<br>implantação R$ 6.000</small></div>
+      </div>
       <div class="bf-grid">
         <div class="bf-item"><div class="bf-vol">Dezembro/2026</div><div class="bf-por"><b>R$ 0</b></div><small>1º mês do contrato, sem mensalidade</small></div>
-        <div class="bf-item"><div class="bf-vol">Janeiro a novembro/2027</div><div class="bf-por"><b>R$ 3.200</b> <span>/mês</span></div><small>11 mensalidades · 1 assistente · 250 negociações/mês</small></div>
-        <div class="bf-item"><div class="bf-vol">No contrato</div><div class="bf-por"><b>R$ 35.200</b></div><small>no lugar de R$ 38.400 · 3.000 negociações no ano</small></div>
+        <div class="bf-item"><div class="bf-vol">Janeiro a novembro/2027</div><div class="bf-por"><b>R$ 3.200</b> <span>/mês</span></div><small>11 mensalidades pagas</small></div>
+        <div class="bf-item"><div class="bf-vol">No contrato de 12 meses</div><div class="bf-por"><b>R$ 35.200</b></div><small>no lugar de R$ 38.400</small></div>
       </div>
       <style>
-.pv .bf-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:18px; }
-.pv .bf-item { border:1px solid var(--linha); border-radius:16px; padding:18px; background:rgba(0,0,0,.12); }
+.pv .plano.bf { display:block; margin-top:34px; padding:40px; cursor:pointer; border:2px solid var(--rosa); background:linear-gradient(135deg, rgba(255,190,245,.20), rgba(102,96,180,.34)); box-shadow:0 0 0 8px rgba(255,190,245,.08), 0 24px 60px rgba(0,0,0,.25); }
+.pv .plano.bf:hover { transform:none; }
+.pv .plano.bf > .dg-etiqueta { display:block; margin-top:6px; }
+.pv .bf-topo { display:grid; grid-template-columns:1fr auto; gap:32px; align-items:center; margin-top:16px; }
+.pv .bf-topo h3 { font-size:32px; line-height:1.15; margin:0 0 12px; }
+.pv .bf-topo p { color:var(--txt); margin:0; font-size:16px; }
+.pv .bf-preco { text-align:right; }
+.pv .bf-preco b { display:inline-block; font:800 60px/1 var(--t); color:var(--rosa); }
+.pv .bf-preco span { color:var(--txt); font-size:18px; }
+.pv .bf-preco small { display:block; color:var(--txt); font-size:13px; margin:6px 0; }
+.pv .bf-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:26px; }
+.pv .bf-item { border:1px solid var(--linha); border-radius:16px; padding:18px; background:rgba(0,0,0,.14); }
 .pv .bf-vol { font:700 15px var(--t); color:#fff; }
 .pv .bf-item small { display:block; color:var(--txt); font-size:12.5px; margin-top:6px; }
 .pv .bf-por { margin-top:10px; }
 .pv .bf-por b { font:700 30px var(--t); color:var(--rosa); }
 .pv .bf-por span { color:var(--txt); }
-@media (max-width: 760px) { .pv .bf-grid { grid-template-columns:1fr; } }
+@media (max-width: 760px) { .pv .plano.bf { padding:28px 22px; } .pv .bf-topo { grid-template-columns:1fr; gap:16px; } .pv .bf-topo h3 { font-size:24px; } .pv .bf-preco { text-align:left; } .pv .bf-preco b { font-size:44px; } .pv .bf-grid { grid-template-columns:1fr; } }
 </style>
     </div>
+    <div class="card paral semsurpresa rv"><span class="dg-icone"><svg aria-hidden="true" width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,1.5A10.5,10.5,0,1,0,22.5,12,10.51211,10.51211,0,0,0,12,1.5Zm0,1a9.45065,9.45065,0,0,1,6.344,2.449L15.51691,7.77606a5.48445,5.48445,0,0,0-7.03382,0L5.656,4.949A9.45065,9.45065,0,0,1,12,2.5ZM16.5,12A4.5,4.5,0,1,1,12,7.5,4.50491,4.50491,0,0,1,16.5,12Zm-14,0A9.45065,9.45065,0,0,1,4.949,5.656L7.77606,8.48309a5.48445,5.48445,0,0,0,0,7.03382L4.949,18.344A9.45065,9.45065,0,0,1,2.5,12ZM12,21.5a9.45065,9.45065,0,0,1-6.344-2.449l2.82708-2.82709a5.48445,5.48445,0,0,0,7.03382,0L18.344,19.051A9.45065,9.45065,0,0,1,12,21.5Zm7.051-3.156-2.82709-2.82708a5.48445,5.48445,0,0,0,0-7.03382L19.051,5.656a9.44145,9.44145,0,0,1,0,12.688Z"/></svg></span><div><h3 style="font-size:17px;margin-bottom:4px">Como ler as opções</h3><p style="color:var(--txt);margin:0">Acima, as duas opções que o Charles levou à diretoria em setembro. Logo abaixo delas, a condição de Black Friday: uma entrada menor, para a Conterplan organizar o Compras com a assistente já trabalhando. Em qualquer opção:</p>
+      <ul><li><b>Número separado:</b> o fornecedor sabe quando fala com a assistente e quando fala com o comprador, e a cotação não se mistura com o resto do dia.</li>
+      <li><b>Saldo da empresa:</b> qualquer assistente consome do mesmo pacote, e o saldo pode ser usado conforme a demanda de cada mês.</li></ul></div></div>
+    <p class="nota">Valores do contrato anual. O saldo de negociações é do contrato inteiro e pode ser usado conforme a demanda de cada mês. Novas assistentes podem entrar a qualquer momento, até o limite do plano. Sem custo escondido: as mensagens da Meta são por conta da dgenny, e a integração com o Sienge não tem custo adicional da dgenny.</p>
+    
     
 
     <div class="card implant rv">
