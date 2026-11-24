@@ -741,9 +741,9 @@ html, body { background: #121325 !important; margin: 0 !important; padding: 0 !i
       <div class="card lado rv">
         <h3>O que a Conterplan investe</h3>
         <div class="linha"><span data-o="r_planoTxt">Mensalidade, plano Black Friday com 1 assistente</span><b data-o="r_mens">R$ 3.200</b></div>
-        <div class="linha"><span>Implantação, uma vez</span><b data-o="r_impl">R$ 6.000</b></div>
+        <div class="linha"><span>Implantação, uma vez</span><b data-o="r_impl">R$ 4.800</b></div>
         <div class="linha"><span>Horas do time no treinamento, uma vez</span><b data-o="r_onb">R$ 630</b></div>
-        <div class="linha tot"><span>No primeiro mês</span><b data-o="r_mud">R$ 9.830</b></div>
+        <div class="linha tot"><span>No primeiro mês</span><b data-o="r_mud">R$ 8.630</b></div>
       </div>
     </div>
     <p class="nota" data-o="r_cob" style="margin-top:10px">165 cotações com 3 fornecedores pedem cerca de 495 negociações por mês. O plano escolhido cobre 250, cerca de 51% disso. O retorno considera só a parte coberta.</p>
@@ -751,8 +751,8 @@ html, body { background: #121325 !important; margin: 0 !important; padding: 0 !i
     <div class="res res4">
       <div class="kpi rv"><b data-o="r_horas2">125 h</b><span data-o="r_pessTxt">por mês devolvidas ao time, o tempo de 0,8 pessoas em jornada integral</span></div>
       <div class="kpi rv"><b data-o="r_x">13,9x</b><span>retorno mensal para cada real da mensalidade</span></div>
-      <div class="kpi rv"><b data-o="r_pb">~5 dias</b><span>para a implantação se pagar</span></div>
-      <div class="kpi rv"><b data-o="r_12">R$ 487 mil</b><span data-o="r_12txt">de ganho líquido em 12 meses: R$ 532 mil de retorno no ano, menos R$ 45 mil investidos (mensalidades, implantação e horas de treinamento)</span></div>
+      <div class="kpi rv"><b data-o="r_pb">~4 dias</b><span>para a implantação se pagar</span></div>
+      <div class="kpi rv"><b data-o="r_12">R$ 488 mil</b><span data-o="r_12txt">de ganho líquido em 12 meses: R$ 532 mil de retorno no ano, menos R$ 44 mil investidos (mensalidades, implantação e horas de treinamento)</span></div>
     </div>
     <table class="cen rv" aria-label="Cenários de retorno">
       <thead><tr><th>Cenário</th><th>Saving sobre o volume cotado</th><th>Horas liberadas por mês</th><th>Retorno mensal</th><th>Retorno por real</th></tr></thead>
@@ -816,7 +816,7 @@ html, body { background: #121325 !important; margin: 0 !important; padding: 0 !i
           <h3>Comece pelo essencial, <span class="dg-destaque">com dezembro sem mensalidade</span></h3>
           <p>Uma assistente integrada ao Sienge, com o mesmo produto apresentado em setembro, e 250 negociações por mês (3.000 no ano, saldo livre). O contrato é de 12 meses e começa em dezembro, que sai sem mensalidade. Dezembro serve para organizar o processo de compras com a assistente já cotando.</p>
         </div>
-        <div class="bf-preco"><small>mensalidade</small><b>R$ 3.200</b><span>/mês</span><small>1 assistente · 250 negociações/mês<br>implantação R$ 6.000</small></div>
+        <div class="bf-preco"><small>mensalidade</small><b>R$ 3.200</b><span>/mês</span><small>1 assistente · 250 negociações/mês<br>implantação R$ 4.800</small></div>
       </div>
       <div class="bf-grid">
         <div class="bf-item"><div class="bf-vol">Dezembro/2026</div><div class="bf-por"><b>R$ 0</b></div><small>1º mês do contrato, sem mensalidade</small></div>
@@ -858,8 +858,8 @@ html, body { background: #121325 !important; margin: 0 !important; padding: 0 !i
         <p style="color:var(--txt);margin:0">Um serviço feito uma única vez, para a assistente entrar no fluxo de compras que a Conterplan já tem.</p>
         <div class="setup">
           <span>Setup inicial · valor único</span>
-          <b data-o="p_impl">R$ 6.000</b>
-          <small>Pago uma vez. R$ 6.000 na condição de Black Friday. Na proposta de setembro: R$ 4.800 com 2 assistentes e R$ 9.600 com 4 assistentes. Inclui todo o setup e o treinamento de até 4 pessoas para usar a dgenny.</small>
+          <b data-o="p_impl">R$ 4.800</b>
+          <small>Pago uma vez. R$ 4.800 na condição de Black Friday, o mesmo valor da proposta de setembro com 2 assistentes (com 4 assistentes, R$ 9.600). Inclui todo o setup e o treinamento de até 4 pessoas para usar a dgenny.</small>
         </div>
       </div>
       <ul>
@@ -959,7 +959,7 @@ html, body { background: #121325 !important; margin: 0 !important; padding: 0 !i
   try { if (new URLSearchParams(location.search).has('roteiro') || /roteiro/.test(location.hash)) root.classList.add('roteiro'); window.addEventListener('hashchange', function(){ root.classList.toggle('roteiro', /roteiro/.test(location.hash)); }); } catch(e) {}
 
   // PLANOS: n assistentes, nome, neg pacote mensal, preco mensalidade, impl implantação (valores de precos.py opcoes e da ficha)
-  var PLANOS = { 1:{n:1, nome:'plano Black Friday com 1 assistente', neg:250, preco:3200, impl:6000}, 2:{n:2, nome:'plano Setembro com 2 assistentes', neg:1000, preco:4000, impl:4800}, 3:{n:4, nome:'plano Setembro com 4 assistentes', neg:2000, preco:6000, impl:9600} };
+  var PLANOS = { 1:{n:1, nome:'plano Black Friday com 1 assistente', neg:250, preco:3200, impl:4800}, 2:{n:2, nome:'plano Setembro com 2 assistentes', neg:1000, preco:4000, impl:4800}, 3:{n:4, nome:'plano Setembro com 4 assistentes', neg:2000, preco:6000, impl:9600} };
   var st = { plano:1 };
   var HORAS_MES = 160, H_TREINO = 5;
 
